@@ -1,47 +1,36 @@
-package Dir1;
+package FindNumber_Game;
 
 import java.util.Scanner;
 
-public class Calc {
+
+public class FindNumber {
+
+    private static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Выберите операцию: ");  //|\
-        System.out.println("1.Вычитание");          //| \
-        System.out.println("2.Сложение");           //|  > Типы операций
-        System.out.println("3.Умножение");          //| /
-        System.out.println("4.Деление");            //|/
 
-        int operation = scanner.nextInt();
-        System.out.println("Введите первое число - ");      // Число 1
-        int int1 = scanner.nextInt();
-        System.out.println("Введите второе число - ");      // Число 2
-        int int2 = scanner.nextInt();
 
-        int sum = int1 + int2;          // Сложение
-        int subs = int1 - int2;         // Вычитание
-        int multipl = int1 * int2;      // Умножение
-                                        //Деление в case 4
 
-        switch (operation){
-            case 1:
-                System.out.println("Результат : " + subs);
+        System.out.println("Ваша задача - угадать число!");
+         for (int i = 20; i <= 60; i+=20) gameLevel(i);
+        System.out.println("Игра окончена!");
+        scanner.close();
+    }
+
+    private static void gameLevel(int range){
+        int number = (int) (Math.random() * range);
+        while (true) {
+            System.out.println("Угадайте число от 0 до " + range);
+            System.out.println("Введите его ниже!");
+            int input_num = scanner.nextInt();
+            if (input_num == number){
+                System.out.println("Вы угадали число!");
                 break;
-            case 2:
-                System.out.println("Результат : " + sum);
-                break;
-            case 3:
-                System.out.println("Результат : " + multipl);
-                break;
-            case 4: try {
-                System.out.println("Результат: " + int1 / int2);
-
-            } catch (ArithmeticException e){
-                System.out.println("На 0 делить нельзя!");
-            } break;
-
-            default:
-                System.out.println("Операция выбрана не корректно. Попробуйте снова");
+            } else if (input_num > number){
+                System.out.println("Загаданное число меньше, чем указанное");
+            } else {
+                System.out.println("Загаданное число больше, чем указанное");
+            }
         }
-        System.out.println("Благодарю за использование калькулятора!");
     }
 }
