@@ -1,11 +1,23 @@
+package FindNumber_Game;
+
 import java.util.Scanner;
 
+
 public class FindNumber {
+
+    private static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+
+
         System.out.println("Ваша задача - угадать число!");
-        int range = 100;
+         for (int i = 20; i <= 60; i+=20) gameLevel(i);
+        System.out.println("Игра окончена!");
+        scanner.close();
+    }
+
+    private static void gameLevel(int range){
         int number = (int) (Math.random() * range);
         while (true) {
             System.out.println("Угадайте число от 0 до " + range);
@@ -20,6 +32,5 @@ public class FindNumber {
                 System.out.println("Загаданное число больше, чем указанное");
             }
         }
-        scanner.close();
     }
 }
