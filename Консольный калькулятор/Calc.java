@@ -13,13 +13,13 @@ public class Calc {
 
         int operation = scanner.nextInt();
         System.out.println("Введите первое число - ");      // Число 1
-        int int1 = scanner.nextInt();
+        float int1 = scanner.nextInt();
         System.out.println("Введите второе число - ");      // Число 2
-        int int2 = scanner.nextInt();
+        float int2 = scanner.nextInt();
 
-        int sum = int1 + int2;          // Сложение
-        int subs = int1 - int2;         // Вычитание
-        int multipl = int1 * int2;      // Умножение
+        float sum = int1 + int2;          // Сложение
+        float subs = int1 - int2;         // Вычитание
+        float multipl = int1 * int2;      // Умножение
                                         //Деление в case 4
 
         switch (operation){
