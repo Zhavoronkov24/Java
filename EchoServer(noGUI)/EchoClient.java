@@ -11,7 +11,7 @@ public class EchoClient {
     private PrintWriter out;
     private BufferedReader in;
 
-    public void  startConnectnion(String ip, int port) throws IOException{
+    public void  startConnection(String ip, int port) throws IOException{
         clientSocket = new Socket(ip,port);
         out = new PrintWriter(clientSocket.getOutputStream(), true);
         in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
