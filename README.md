@@ -21,3 +21,5 @@
 [Game2](https://github.com/Zhavoronkov24/Java/tree/main/Game2) - оконная игра, в которой нужно ловить предметы (в разработке)
 
 → 👂 → [EchoServer(noGUI)](https://github.com/Zhavoronkov24/Java/tree/main/EchoServer(noGUI)) - локальный эхо-сервер без интерфейса, работающий по умолчанию на 9999 порту
+
+→ ⎚ →[EchoServerWithGUI](https://github.com/Zhavoronkov24/Java/tree/main/EchoServerWithGUI) - локальный эхо-сервер с GUI клиентом, работающий по умолчанию на 9998 порту
